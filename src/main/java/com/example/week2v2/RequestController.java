@@ -39,9 +39,16 @@ public class RequestController {
             case "multiply":
                 return new Calculator("multiply", num1 * num2);
 
+            case "divide":
+                if (num2 == 0){
+                    return new Calculator("Cannot divide by zero", 0);
+                }
+                else {
+                    return new Calculator("divide", num1 / num2);
+                }
 
             default:
-                return new Calculator("test", 0);
+                return new Calculator("Not a valid operation", 0);
 
         }
     }
