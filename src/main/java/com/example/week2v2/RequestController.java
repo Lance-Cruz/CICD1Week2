@@ -26,4 +26,17 @@ public class RequestController {
     public Person getPerson(){
         return new Person("Lance", 20);
     }
+
+    @GetMapping("/calculator")
+    public Calculator getCalculator(@RequestParam double num1, @RequestParam double num2, @RequestParam String operation){
+        switch (operation){
+            case "add":
+                return new Calculator("add", num1 + num2);
+
+
+            default:
+                return new Calculator("test", 0);
+
+        }
+    }
 }
