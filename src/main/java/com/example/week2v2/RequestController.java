@@ -33,6 +33,12 @@ public class RequestController {
             case "add":
                 return new Calculator("add", num1 + num2);
 
+            case "subtract":
+                return new Calculator("subtract", num1 - num2);
+
+            case "multiply":
+                return new Calculator("multiply", num1 * num2);
+
 
             default:
                 return new Calculator("test", 0);
